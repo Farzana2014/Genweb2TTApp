@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from django.conf.urls import include
+
 urlpatterns = [
+    url(r'^Genweb2TTAppClub/', include('Genweb2TTAppClub.urls')),
     url(r'^admin/', admin.site.urls),
 ]

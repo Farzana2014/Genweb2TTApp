@@ -1,0 +1,17 @@
+{% load static %}
+
+<div align="center">
+<h1>Welcome to Genweb2 TT Club!</h1>
+</div>
+
+<div align="center">
+  <link rel="stylesheet" type="text/css" href="{% static 'ttmatches/style.css' %}" />{% if match_list %}
+    <ul>
+    {% for match in match_list %}
+        <li><a href="{% url 'ttmatches:detail' match.id %}">{{match.MatchName}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No match are available.</p>
+{% endif %}
+</div>
